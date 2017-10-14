@@ -1,0 +1,4 @@
+OBJECTS = \
+$(OBJECTS_DIR)/patchPointToCell.o\
+$(OBJECTS_DIR)/extendedPointToCell.o\
+$(OBJECTS_DIR)/cellSetBoundaryToFace.o

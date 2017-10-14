@@ -1,0 +1,5 @@
+LOCAL_OBJECTS = \
+avgConstraint.o\
+strain.o\
+equivalent.o\
+volToPoint.o

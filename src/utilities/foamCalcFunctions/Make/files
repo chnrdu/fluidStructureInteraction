@@ -1,0 +1,7 @@
+avgConstraint/avgConstraint.C
+strain/strain.C
+equivalent/equivalent.C
+
+volToPoint/volToPoint.C
+
+LIB = $(FOAM_USER_LIBBIN)/libfoamStressCalcFunctions

@@ -1,0 +1,10 @@
+EXE_INC = \
+    -I../../fluidStructureInteraction/lnInclude \
+    -I$(LIB_SRC)/postProcessing/foamCalcFunctions/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude
+
+EXE_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+    -lfluidStructureInteraction \
+    -lfiniteVolume \
+    -lfoamCalcFunctions

@@ -1,0 +1,5 @@
+OBJECTS = \
+$(OBJECTS_DIR)/avgConstraint.o\
+$(OBJECTS_DIR)/strain.o\
+$(OBJECTS_DIR)/equivalent.o\
+$(OBJECTS_DIR)/volToPoint.o

@@ -1,0 +1,5 @@
+SOURCE = \
+avgConstraint/avgConstraint.C\
+strain/strain.C\
+equivalent/equivalent.C\
+volToPoint/volToPoint.C

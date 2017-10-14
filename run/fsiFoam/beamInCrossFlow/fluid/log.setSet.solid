@@ -1,0 +1,38 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.1                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build    : 3.1-7d8e040bf53d
+Exec     : setSet -case ../solid -batch ../solid/setBatch
+Date     : Mar 24 2017
+Time     : 21:36:33
+Host     : node01-el7
+PID      : 16113
+CtrlDict : /home/rdu/foam/foam-extend-3.1/etc/controlDict
+Case     : ../solid
+nProcs   : 1
+SigFpe   : Enabling floating point exception trapping (FOAM_SIGFPE).
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Time:0  cells:256  faces:896  points:405  patches:3  bb:(0.45 0 -0.2) (0.55 0.2 0)
+
+Reading commands from file "../solid/setBatch"
+Please type 'help', 'quit' or a set command after prompt.
+Doing:"faceSet interface-zone new patchToFace interface"
+    Set:interface-zone  Size:0  Action:new
+    Adding all faces of patch interface ...
+    Found matching patch interface with 192 faces.
+    Writing interface-zone (size 192) to "constant/polyMesh/sets/interface-zone" and to vtk file "VTK/interface-zone/interface-zone_1.vtk"
+
+Doing:"quit"
+Quitting ...
+
+End
+

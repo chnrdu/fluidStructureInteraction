@@ -1,0 +1,4 @@
+SOURCE = \
+sets/cellSources/patchPointToCell/patchPointToCell.C\
+sets/cellSources/extendedPointToCell/extendedPointToCell.C\
+sets/faceSources/cellSetBoundaryToFace/cellSetBoundaryToFace.C

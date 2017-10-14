@@ -1,0 +1,35 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.1                                |
+|   \\  /    A nd           | Web:         http://www.extend-project.de       |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build    : 3.1-7d8e040bf53d
+Exec     : setsToZones -noFlipMap
+Date     : Mar 24 2017
+Time     : 21:36:33
+Host     : node01-el7
+PID      : 16119
+CtrlDict : /home/rdu/foam/foam-extend-3.1/etc/controlDict
+Case     : /home/rdu/foam/rdu-3.1/FluidStructureInteraction/run/fsiFoam/beamInCrossFlow/fluid
+nProcs   : 1
+SigFpe   : Enabling floating point exception trapping (FOAM_SIGFPE).
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Searched : "constant/polyMesh/sets"
+Found    : 
+1
+(
+interface-zone
+)
+
+
+Adding set interface-zone as a faceZone.
+Writing mesh.
+
+End

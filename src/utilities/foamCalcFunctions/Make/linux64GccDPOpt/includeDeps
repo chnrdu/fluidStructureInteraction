@@ -1,0 +1,4 @@
+include avgConstraint/avgConstraint.dep
+include strain/strain.dep
+include equivalent/equivalent.dep
+include volToPoint/volToPoint.dep

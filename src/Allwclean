@@ -1,0 +1,24 @@
+#!/bin/sh
+set -x
+
+wclean fluidStructureInteraction
+
+wclean solvers/fsiFoam
+wclean solvers/weakFsiFoam
+wclean solvers/flowFoam
+wclean solvers/stressFoam
+wclean solvers/crackStressFoam
+wclean solvers/thermalStressFoam
+
+wclean utilities/functionObjects/pointHistory
+wclean utilities/functionObjects/energyHistory
+wclean utilities/functionObjects/patchAvgTractionHistory
+wclean utilities/foamCalcFunctions
+
+wclean utilities/set2dMeshThickness
+wclean utilities/decomposePar
+wclean utilities/reconstructPar
+wclean utilities/meshTools
+
+# Wipe out all lnInclude directories and re-link
+wcleanLnIncludeAll

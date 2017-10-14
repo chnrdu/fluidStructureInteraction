@@ -1,0 +1,4 @@
+LOCAL_OBJECTS = \
+patchPointToCell.o\
+extendedPointToCell.o\
+cellSetBoundaryToFace.o

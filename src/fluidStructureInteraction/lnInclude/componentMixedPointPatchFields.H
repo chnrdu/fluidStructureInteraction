@@ -1,0 +1,1 @@
+../stressModels/fvPatchFields/componentMixed/componentMixedPointPatchFields.H

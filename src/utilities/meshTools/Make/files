@@ -1,0 +1,5 @@
+sets/cellSources/patchPointToCell/patchPointToCell.C
+sets/cellSources/extendedPointToCell/extendedPointToCell.C
+sets/faceSources/cellSetBoundaryToFace/cellSetBoundaryToFace.C
+
+LIB = $(FOAM_USER_LIBBIN)/libmeshToolsZt

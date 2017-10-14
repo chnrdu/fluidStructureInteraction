@@ -1,0 +1,5 @@
+DEPENDENCIES = \
+avgConstraint/avgConstraint.dep\
+strain/strain.dep\
+equivalent/equivalent.dep\
+volToPoint/volToPoint.dep

@@ -1,0 +1,24 @@
+#!/bin/sh
+set -x
+
+wmake libso fluidStructureInteraction
+
+wmake solvers/fsiFoam
+wmake solvers/weakFsiFoam
+wmake solvers/flowFoam
+wmake solvers/stressFoam
+wmake solvers/crackStressFoam
+wmake solvers/thermalStressFoam
+
+wmake utilities/set2dMeshThickness
+wmake utilities/decomposePar
+wmake utilities/reconstructPar
+
+wmake libso utilities/foamCalcFunctions
+wmake libso utilities/meshTools
+wmake libso utilities/functionObjects/pointHistory
+wmake libso utilities/functionObjects/energyHistory
+wmake libso utilities/functionObjects/patchAvgTractionHistory
+
+
+
