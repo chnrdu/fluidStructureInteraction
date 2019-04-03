@@ -26,7 +26,7 @@ Application
     fsiFoam
 
 Description
-    Finite volume fluid structure interaction solver based on partitioned 
+    Finite volume fluid structure interaction solver based on partitioned
     approach and strong coupling.
 
 Author
@@ -46,10 +46,11 @@ int main(int argc, char *argv[])
 #   include "createTime.H"
 #   include "createDynamicFvMesh.H"
 #   include "createStressMesh.H"
+#   include "createDynamicFvMesh2.H"
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-    fluidStructureInterface fsi(mesh, stressMesh);
+    fluidStructureInterface fsi(mesh,mesh2,stressMesh); //add mesh2
 
     Info<< "\nStarting time loop\n" << endl;
 
@@ -75,15 +76,24 @@ int main(int argc, char *argv[])
 
             fsi.updateForce();
 
+            fsi.updateDisplacement2();
+
+            fsi.moveFluidMesh2();
+
+            fsi.flow2().evolve();
+
+            fsi.updateForce2();
+
             fsi.stress().evolve();
 
-            residualNorm = 
+            residualNorm =
                 fsi.updateResidual();
         }
         while
         (
             (residualNorm > fsi.outerCorrTolerance())
          && (fsi.outerCorr() < fsi.nOuterCorr())
+
         );
 
         fsi.stress().updateTotalFields();
