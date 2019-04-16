@@ -3380,8 +3380,8 @@ void Foam::fluidStructureInterface::updateForce2()
     tensorField solidZone2SurfaceGradientOfVelocity =
         stress().faceZoneSurfaceGradientOfVelocity
         (
-            solidZoneIndex(),
-            solidPatchIndex()
+            solidZone2Index(),
+            solidPatch2Index()
         );
 
     vectorField solidZone2Normal =
