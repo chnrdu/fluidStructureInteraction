@@ -281,6 +281,7 @@ fluidStructureInterface/fluidStructureInterface.dep: $(WM_PROJECT_DIR)/src/foam/
 fluidStructureInterface/fluidStructureInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 fluidStructureInterface/fluidStructureInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 fluidStructureInterface/fluidStructureInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+fluidStructureInterface/fluidStructureInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 fluidStructureInterface/fluidStructureInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 fluidStructureInterface/fluidStructureInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 fluidStructureInterface/fluidStructureInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H
