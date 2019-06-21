@@ -693,8 +693,6 @@ void Foam::fluidStructureInterface::calcGgiInterpolator2() const
 
     // Create copy of solid face zone primitive patch in current configuration
 
-    deleteDemandDrivenData(currentSolidZonePatchPtr_);
-    deleteDemandDrivenData(currentSolidZonePointsPtr_);
     deleteDemandDrivenData(currentSolidZone2PatchPtr_);
     deleteDemandDrivenData(currentSolidZone2PointsPtr_);
 
@@ -1723,32 +1721,32 @@ void Foam::fluidStructureInterface::initializeFields()
     solidZonePointsDispl_ =
         vectorField
         (
-            fluidMesh().faceZones()[fluidZoneIndex_]().nPoints(),
+            solidMesh().faceZones()[solidZoneIndex_]().nPoints(),
             vector::zero
         );
 
     solidZonePointsDisplRef_ =
         vectorField
         (
-            fluidMesh().faceZones()[fluidZoneIndex_]().nPoints(),
+            solidMesh().faceZones()[solidZoneIndex_]().nPoints(),
             vector::zero
         );
 
     solidZone2PointsDispl_ = //zone2
         vectorField
         (
-            fluidMesh2().faceZones()[fluid2ZoneIndex_]().nPoints(),
+            solidMesh().faceZones()[solidZone2Index_]().nPoints(),
             vector::zero
         );
 
     solidZone2PointsDisplRef_ =
         vectorField
         (
-            fluidMesh2().faceZones()[fluid2ZoneIndex_]().nPoints(),
+            solidMesh().faceZones()[solidZone2Index_]().nPoints(),
             vector::zero
         );
 
-   fluid2ZonePointsDispl_ =
+    fluid2ZonePointsDispl_ =
         vectorField
         (
             fluidMesh2().faceZones()[fluid2ZoneIndex_]().nPoints(),
@@ -1768,7 +1766,7 @@ void Foam::fluidStructureInterface::initializeFields()
             fluidMesh2().faceZones()[fluid2ZoneIndex_]().nPoints(),
             vector::zero
         );
-
+/*
     solidZonePointsDispl_ =   //?bian liang ming bu bian
         vectorField
         (
@@ -1782,20 +1780,8 @@ void Foam::fluidStructureInterface::initializeFields()
             fluidMesh2().faceZones()[fluid2ZoneIndex_]().nPoints(),
             vector::zero
         );
+*/
 
-        solidZone2PointsDispl_ =   //?bian liang ming bu bian // zone2
-        vectorField
-        (
-            fluidMesh2().faceZones()[fluid2ZoneIndex_]().nPoints(),
-            vector::zero
-        );
-
-    solidZone2PointsDisplRef_ =
-        vectorField
-        (
-            fluidMesh2().faceZones()[fluid2ZoneIndex_]().nPoints(),
-            vector::zero
-        );
 
     residualPrev_ = residual_;
     residual2Prev_ = residual2_;
@@ -3380,8 +3366,8 @@ void Foam::fluidStructureInterface::updateForce2()
     tensorField solidZone2SurfaceGradientOfVelocity =
         stress().faceZoneSurfaceGradientOfVelocity
         (
-            solidZoneIndex(),
-            solidPatchIndex()
+            solidZone2Index(),
+            solidPatch2Index()
         );
 
     vectorField solidZone2Normal =
