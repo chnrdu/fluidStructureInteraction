@@ -281,6 +281,7 @@ flowModels/icoFlow/icoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/PrimitivePa
 flowModels/icoFlow/icoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 flowModels/icoFlow/icoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 flowModels/icoFlow/icoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+flowModels/icoFlow/icoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 flowModels/icoFlow/icoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 flowModels/icoFlow/icoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 flowModels/icoFlow/icoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H

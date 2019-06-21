@@ -282,6 +282,7 @@ stressModels/pRveUnsIncrTotalLagrangianStress/pRveUnsIncrTotalLagrangianStress.d
 stressModels/pRveUnsIncrTotalLagrangianStress/pRveUnsIncrTotalLagrangianStress.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 stressModels/pRveUnsIncrTotalLagrangianStress/pRveUnsIncrTotalLagrangianStress.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 stressModels/pRveUnsIncrTotalLagrangianStress/pRveUnsIncrTotalLagrangianStress.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+stressModels/pRveUnsIncrTotalLagrangianStress/pRveUnsIncrTotalLagrangianStress.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 stressModels/pRveUnsIncrTotalLagrangianStress/pRveUnsIncrTotalLagrangianStress.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 stressModels/pRveUnsIncrTotalLagrangianStress/pRveUnsIncrTotalLagrangianStress.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 stressModels/pRveUnsIncrTotalLagrangianStress/pRveUnsIncrTotalLagrangianStress.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H

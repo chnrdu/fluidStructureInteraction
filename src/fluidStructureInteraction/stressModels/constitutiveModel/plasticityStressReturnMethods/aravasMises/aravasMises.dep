@@ -328,6 +328,7 @@ stressModels/constitutiveModel/plasticityStressReturnMethods/aravasMises/aravasM
 stressModels/constitutiveModel/plasticityStressReturnMethods/aravasMises/aravasMises.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelIOList.H
 stressModels/constitutiveModel/plasticityStressReturnMethods/aravasMises/aravasMises.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/polyBoundaryMesh.H
 stressModels/constitutiveModel/plasticityStressReturnMethods/aravasMises/aravasMises.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/polyPatchList.H
+stressModels/constitutiveModel/plasticityStressReturnMethods/aravasMises/aravasMises.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 stressModels/constitutiveModel/plasticityStressReturnMethods/aravasMises/aravasMises.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H
 stressModels/constitutiveModel/plasticityStressReturnMethods/aravasMises/aravasMises.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/pointZoneMesh.H
 stressModels/constitutiveModel/plasticityStressReturnMethods/aravasMises/aravasMises.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ZoneMesh.H

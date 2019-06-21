@@ -281,6 +281,7 @@ crackStressFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/PrimitivePatchCheck.C
 crackStressFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 crackStressFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 crackStressFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+crackStressFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 crackStressFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 crackStressFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 crackStressFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H

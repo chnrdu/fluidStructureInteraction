@@ -328,6 +328,7 @@ stressModels/constitutiveModel/constitutiveModel.dep: $(WM_PROJECT_DIR)/src/foam
 stressModels/constitutiveModel/constitutiveModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelIOList.H
 stressModels/constitutiveModel/constitutiveModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/polyBoundaryMesh.H
 stressModels/constitutiveModel/constitutiveModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/polyPatchList.H
+stressModels/constitutiveModel/constitutiveModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 stressModels/constitutiveModel/constitutiveModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H
 stressModels/constitutiveModel/constitutiveModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/pointZoneMesh.H
 stressModels/constitutiveModel/constitutiveModel.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ZoneMesh.H

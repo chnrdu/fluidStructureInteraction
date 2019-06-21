@@ -281,6 +281,7 @@ fsiFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/PrimitivePatchCheck.C
 fsiFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 fsiFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 fsiFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+fsiFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 fsiFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 fsiFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 fsiFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H
@@ -653,6 +654,7 @@ fsiFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/setRootCase.H
 fsiFoam.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/createTime.H
 fsiFoam.dep: $(WM_PROJECT_DIR)/src/dynamicMesh/dynamicFvMesh/lnInclude/createDynamicFvMesh.H
 fsiFoam.dep: createStressMesh.H
+fsiFoam.dep: createDynamicFvMesh2.H
 $(OBJECTS_DIR)/fsiFoam.o: $(EXE_DEP)
 $(OBJECTS_DIR)/fsiFoam.o:
 	@SOURCE_DIR=.

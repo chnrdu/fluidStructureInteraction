@@ -321,6 +321,7 @@ numerics/fvMotionSolvers/velocityLaplacianFvMotionSolver.dep: $(WM_PROJECT_DIR)/
 numerics/fvMotionSolvers/velocityLaplacianFvMotionSolver.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 numerics/fvMotionSolvers/velocityLaplacianFvMotionSolver.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 numerics/fvMotionSolvers/velocityLaplacianFvMotionSolver.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+numerics/fvMotionSolvers/velocityLaplacianFvMotionSolver.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 numerics/fvMotionSolvers/velocityLaplacianFvMotionSolver.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 numerics/fvMotionSolvers/velocityLaplacianFvMotionSolver.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 numerics/fvMotionSolvers/velocityLaplacianFvMotionSolver.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H

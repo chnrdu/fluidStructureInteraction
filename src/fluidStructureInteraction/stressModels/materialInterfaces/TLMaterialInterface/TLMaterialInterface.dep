@@ -280,6 +280,7 @@ stressModels/materialInterfaces/TLMaterialInterface/TLMaterialInterface.dep: $(W
 stressModels/materialInterfaces/TLMaterialInterface/TLMaterialInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 stressModels/materialInterfaces/TLMaterialInterface/TLMaterialInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 stressModels/materialInterfaces/TLMaterialInterface/TLMaterialInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+stressModels/materialInterfaces/TLMaterialInterface/TLMaterialInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 stressModels/materialInterfaces/TLMaterialInterface/TLMaterialInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 stressModels/materialInterfaces/TLMaterialInterface/TLMaterialInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 stressModels/materialInterfaces/TLMaterialInterface/TLMaterialInterface.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H

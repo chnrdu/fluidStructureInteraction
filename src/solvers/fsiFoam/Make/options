@@ -10,7 +10,7 @@ EXE_INC = \
 
 EXE_LIBS = \
     -L$(FOAM_USER_LIBBIN) \
-    -lfluidStructureInteraction \
+    -lfluidStructureInteractionRheo \
     -lfiniteVolume \
     -lincompressibleTurbulenceModel \
     -lincompressibleRASModels \

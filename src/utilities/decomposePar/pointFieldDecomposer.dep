@@ -284,6 +284,7 @@ pointFieldDecomposer.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/PrimitivePatchChe
 pointFieldDecomposer.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 pointFieldDecomposer.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 pointFieldDecomposer.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+pointFieldDecomposer.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 pointFieldDecomposer.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 pointFieldDecomposer.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 pointFieldDecomposer.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H

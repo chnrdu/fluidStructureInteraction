@@ -280,6 +280,7 @@ stressModels/solidInterfaces/solidInterfaceITL/solidInterfaceITL.dep: $(WM_PROJE
 stressModels/solidInterfaces/solidInterfaceITL/solidInterfaceITL.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 stressModels/solidInterfaces/solidInterfaceITL/solidInterfaceITL.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 stressModels/solidInterfaces/solidInterfaceITL/solidInterfaceITL.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+stressModels/solidInterfaces/solidInterfaceITL/solidInterfaceITL.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 stressModels/solidInterfaces/solidInterfaceITL/solidInterfaceITL.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 stressModels/solidInterfaces/solidInterfaceITL/solidInterfaceITL.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 stressModels/solidInterfaces/solidInterfaceITL/solidInterfaceITL.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H

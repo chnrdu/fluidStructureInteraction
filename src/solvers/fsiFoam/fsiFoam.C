@@ -85,9 +85,11 @@ int main(int argc, char *argv[])
             fsi.updateForce2();
 
             fsi.stress().evolve();
+            Info << "here. rheol" << endl;
 
             residualNorm =
                 fsi.updateResidual();
+            Info << "there. rheo? " << endl;
         }
         while
         (

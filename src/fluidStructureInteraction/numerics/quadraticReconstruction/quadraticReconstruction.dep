@@ -346,6 +346,7 @@ numerics/quadraticReconstruction/quadraticReconstruction.dep: $(WM_PROJECT_DIR)/
 numerics/quadraticReconstruction/quadraticReconstruction.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelIOList.H
 numerics/quadraticReconstruction/quadraticReconstruction.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/polyBoundaryMesh.H
 numerics/quadraticReconstruction/quadraticReconstruction.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/polyPatchList.H
+numerics/quadraticReconstruction/quadraticReconstruction.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 numerics/quadraticReconstruction/quadraticReconstruction.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H
 numerics/quadraticReconstruction/quadraticReconstruction.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/pointZoneMesh.H
 numerics/quadraticReconstruction/quadraticReconstruction.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ZoneMesh.H

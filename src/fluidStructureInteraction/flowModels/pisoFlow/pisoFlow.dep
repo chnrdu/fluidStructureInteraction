@@ -281,6 +281,7 @@ flowModels/pisoFlow/pisoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Primitive
 flowModels/pisoFlow/pisoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 flowModels/pisoFlow/pisoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 flowModels/pisoFlow/pisoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+flowModels/pisoFlow/pisoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 flowModels/pisoFlow/pisoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 flowModels/pisoFlow/pisoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 flowModels/pisoFlow/pisoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H

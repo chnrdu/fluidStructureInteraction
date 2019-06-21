@@ -297,6 +297,7 @@ stressModels/fvPatchFields/tractionDisplacement/tractionDisplacementFvPatchVecto
 stressModels/fvPatchFields/tractionDisplacement/tractionDisplacementFvPatchVectorField.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelIOList.H
 stressModels/fvPatchFields/tractionDisplacement/tractionDisplacementFvPatchVectorField.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/polyBoundaryMesh.H
 stressModels/fvPatchFields/tractionDisplacement/tractionDisplacementFvPatchVectorField.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/polyPatchList.H
+stressModels/fvPatchFields/tractionDisplacement/tractionDisplacementFvPatchVectorField.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 stressModels/fvPatchFields/tractionDisplacement/tractionDisplacementFvPatchVectorField.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 stressModels/fvPatchFields/tractionDisplacement/tractionDisplacementFvPatchVectorField.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 stressModels/fvPatchFields/tractionDisplacement/tractionDisplacementFvPatchVectorField.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H

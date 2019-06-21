@@ -33,4 +33,4 @@
 # 1 "files"
 fsiFoam.C
 
-EXE = $(FOAM_USER_APPBIN)/fsiFoam
+EXE = $(FOAM_USER_APPBIN)/fsiFoam.rheo

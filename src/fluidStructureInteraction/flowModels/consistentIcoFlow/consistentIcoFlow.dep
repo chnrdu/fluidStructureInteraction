@@ -282,6 +282,7 @@ flowModels/consistentIcoFlow/consistentIcoFlow.dep: $(WM_PROJECT_DIR)/src/foam/l
 flowModels/consistentIcoFlow/consistentIcoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 flowModels/consistentIcoFlow/consistentIcoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 flowModels/consistentIcoFlow/consistentIcoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+flowModels/consistentIcoFlow/consistentIcoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 flowModels/consistentIcoFlow/consistentIcoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 flowModels/consistentIcoFlow/consistentIcoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 flowModels/consistentIcoFlow/consistentIcoFlow.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H

@@ -34,4 +34,4 @@
 EXE_INC =     -I../../fluidStructureInteraction/lnInclude     -I$(LIB_SRC)/finiteVolume/lnInclude     -I$(LIB_SRC)/dynamicMesh/dynamicFvMesh/lnInclude     -I$(LIB_SRC)/finiteArea/lnInclude     -I$(LIB_SRC)/lagrangian/basic/lnInclude     -I$(LIB_SRC)/meshTools/lnInclude     -I$(LIB_SRC)/tetFiniteElement/lnInclude     -I$(LIB_SRC)/solidModels/lnInclude
 # 10 "options"
 
-EXE_LIBS =     -L$(FOAM_USER_LIBBIN)     -lfluidStructureInteraction     -lfiniteVolume     -lincompressibleTurbulenceModel     -lincompressibleRASModels     -lincompressibleLESModels     -lincompressibleTransportModels     -ldynamicFvMesh     -ldynamicMesh     -ltopoChangerFvMesh     -lmeshTools     -lsolidModels
+EXE_LIBS =     -L$(FOAM_USER_LIBBIN)     -lfluidStructureInteractionRheo     -lfiniteVolume     -lincompressibleTurbulenceModel     -lincompressibleRASModels     -lincompressibleLESModels     -lincompressibleTransportModels     -ldynamicFvMesh     -ldynamicMesh     -ltopoChangerFvMesh     -lmeshTools     -lsolidModels

@@ -51,8 +51,8 @@ namespace stressModels
 defineTypeNameAndDebug(unsIncrTotalLagrangianStress, 0);
 addToRunTimeSelectionTable
 (
-    stressModel, 
-    unsIncrTotalLagrangianStress, 
+    stressModel,
+    unsIncrTotalLagrangianStress,
     dictionary
 );
 
@@ -375,15 +375,15 @@ tmp<vectorField> unsIncrTotalLagrangianStress::patchPointDisplacementIncrement
     (
         new vectorField
         (
-            mesh().boundaryMesh()[patchID].localPoints().size(), 
+            mesh().boundaryMesh()[patchID].localPoints().size(),
             vector::zero
         )
     );
 
-    tPointDisplacement() = 
+    tPointDisplacement() =
         vectorField
         (
-            pointDD_.internalField(), 
+            pointDD_.internalField(),
             mesh().boundaryMesh()[patchID].meshPoints()
         );
 
@@ -401,7 +401,7 @@ tmp<vectorField> unsIncrTotalLagrangianStress
     (
         new vectorField
         (
-            mesh().faceZones()[zoneID]().localPoints().size(), 
+            mesh().faceZones()[zoneID]().localPoints().size(),
             vector::zero
         )
     );
@@ -434,11 +434,11 @@ tmp<vectorField> unsIncrTotalLagrangianStress
         forAll(zonePointsDisplGlobal, globalPointI)
         {
             label localPoint = curPointMap[globalPointI];
-	    
+
             if(zoneMeshPoints[localPoint] < mesh().nPoints())
             {
                 label procPoint = zoneMeshPoints[localPoint];
-                
+
                 zonePointsDisplGlobal[globalPointI] = pointDDI[procPoint];
 
                 pointNumProcs[globalPointI] = 1;
@@ -457,17 +457,17 @@ tmp<vectorField> unsIncrTotalLagrangianStress
         forAll(pointDisplacement, globalPointI)
         {
             label localPoint = curPointMap[globalPointI];
-	    
-            pointDisplacement[localPoint] = 
+
+            pointDisplacement[localPoint] =
                 zonePointsDisplGlobal[globalPointI];
         }
     }
     else
     {
-        tPointDisplacement() = 
+        tPointDisplacement() =
             vectorField
             (
-                pointDDI, 
+                pointDDI,
                 mesh().faceZones()[zoneID]().meshPoints()
             );
     }
@@ -494,13 +494,13 @@ tmp<tensorField> unsIncrTotalLagrangianStress
     );
     tensorField& velocityGradient = tVelocityGradient();
 
-    vectorField pPointU = 
+    vectorField pPointU =
         volToPoint_.interpolate(mesh().boundaryMesh()[patchID], U_);
 
-    const faceList& localFaces = 
+    const faceList& localFaces =
         mesh().boundaryMesh()[patchID].localFaces();
 
-    vectorField localPoints = 
+    vectorField localPoints =
         mesh().boundaryMesh()[patchID].localPoints();
     localPoints += pointD_.boundaryField()[patchID].patchInternalField();
 
@@ -518,7 +518,7 @@ tmp<tensorField> unsIncrTotalLagrangianStress
     {
         // global face zone
 
-        const label patchStart = 
+        const label patchStart =
             mesh().boundaryMesh()[patchID].start();
 
         forAll(patchGradU, i)
@@ -526,7 +526,7 @@ tmp<tensorField> unsIncrTotalLagrangianStress
             velocityGradient
             [
                 mesh().faceZones()[zoneID].whichFace(patchStart + i)
-            ] = 
+            ] =
                 patchGradU[i];
         }
 
@@ -542,12 +542,12 @@ tmp<tensorField> unsIncrTotalLagrangianStress
 }
 
 
-tmp<vectorField> 
+tmp<vectorField>
 unsIncrTotalLagrangianStress::currentFaceZonePoints(const label zoneID) const
 {
     vectorField pointDisplacement
     (
-        mesh().faceZones()[zoneID]().localPoints().size(), 
+        mesh().faceZones()[zoneID]().localPoints().size(),
         vector::zero
     );
 
@@ -571,7 +571,7 @@ unsIncrTotalLagrangianStress::currentFaceZonePoints(const label zoneID) const
             zoneMeshPoints.size(),
             vector::zero
         );
-        
+
         //- Inter-proc points are shared by multiple procs
         //  pointNumProc is the number of procs which a point lies on
         scalarField pointNumProcs(zoneMeshPoints.size(), 0);
@@ -584,7 +584,7 @@ unsIncrTotalLagrangianStress::currentFaceZonePoints(const label zoneID) const
             {
                 label procPoint = zoneMeshPoints[localPoint];
 
-                zonePointsDisplGlobal[globalPointI] = 
+                zonePointsDisplGlobal[globalPointI] =
                     pointDI[procPoint] + pointDDI[procPoint];
 
                 pointNumProcs[globalPointI] = 1;
@@ -603,17 +603,17 @@ unsIncrTotalLagrangianStress::currentFaceZonePoints(const label zoneID) const
         forAll(pointDisplacement, globalPointI)
         {
             label localPoint = curPointMap[globalPointI];
-	    
-            pointDisplacement[localPoint] = 
+
+            pointDisplacement[localPoint] =
                 zonePointsDisplGlobal[globalPointI];
         }
     }
     else
     {
-        pointDisplacement = 
+        pointDisplacement =
             vectorField
             (
-                pointDI + pointDDI, 
+                pointDI + pointDDI,
                 mesh().faceZones()[zoneID]().meshPoints()
             );
     }
@@ -622,7 +622,7 @@ unsIncrTotalLagrangianStress::currentFaceZonePoints(const label zoneID) const
     (
         new vectorField
         (
-            mesh().faceZones()[zoneID]().localPoints() 
+            mesh().faceZones()[zoneID]().localPoints()
           + pointDisplacement
         )
     );
@@ -653,7 +653,7 @@ tmp<vectorField> unsIncrTotalLagrangianStress::faceZoneNormal
 
     vectorField localPoints =
         mesh().boundaryMesh()[patchID].localPoints();
-    localPoints += 
+    localPoints +=
         pointD_.boundaryField()[patchID].patchInternalField()
       + pointDD_.boundaryField()[patchID].patchInternalField();
 
@@ -677,7 +677,7 @@ tmp<vectorField> unsIncrTotalLagrangianStress::faceZoneNormal
     {
         // global face zone
 
-        const label patchStart = 
+        const label patchStart =
             mesh().boundaryMesh()[patchID].start();
 
         forAll(patchNormals, i)
@@ -685,7 +685,7 @@ tmp<vectorField> unsIncrTotalLagrangianStress::faceZoneNormal
             normals
             [
                 mesh().faceZones()[zoneID].whichFace(patchStart + i)
-            ] = 
+            ] =
                 patchNormals[i];
         }
 
@@ -713,11 +713,11 @@ void unsIncrTotalLagrangianStress::setTraction
     )
     {
         FatalErrorIn("void unsIncrTotalLagrangianStress::setTraction(...)")
-            << "Bounary condition on " << DD_.name() 
-                <<  " is " 
-                << DD_.boundaryField()[patchID].type() 
+            << "Bounary condition on " << DD_.name()
+                <<  " is "
+                << DD_.boundaryField()[patchID].type()
                 << "for patch" << mesh().boundary()[patchID].name()
-                << ", instead " 
+                << ", instead "
                 << tractionDisplacementIncrementFvPatchVectorField::typeName
                 << abort(FatalError);
     }
@@ -744,11 +744,11 @@ void unsIncrTotalLagrangianStress::setPressure
     )
     {
         FatalErrorIn("void unsIncrTotalLagrangianStress::setTraction(...)")
-            << "Bounary condition on " << DD_.name() 
-                <<  " is " 
-                << DD_.boundaryField()[patchID].type() 
+            << "Bounary condition on " << DD_.name()
+                <<  " is "
+                << DD_.boundaryField()[patchID].type()
                 << "for patch" << mesh().boundary()[patchID].name()
-                << ", instead " 
+                << ", instead "
                 << tractionDisplacementIncrementFvPatchVectorField::typeName
                 << abort(FatalError);
     }
@@ -771,7 +771,7 @@ void unsIncrTotalLagrangianStress::setTraction
 {
     vectorField patchTraction(mesh().boundary()[patchID].size(), vector::zero);
 
-    const label patchStart = 
+    const label patchStart =
         mesh().boundaryMesh()[patchID].start();
 
     forAll(patchTraction, i)
@@ -795,7 +795,7 @@ void unsIncrTotalLagrangianStress::setPressure
 {
     scalarField patchPressure(mesh().boundary()[patchID].size(), 0.0);
 
-    const label patchStart = 
+    const label patchStart =
         mesh().boundaryMesh()[patchID].start();
 
     forAll(patchPressure, i)
@@ -825,11 +825,11 @@ tmp<vectorField> unsIncrTotalLagrangianStress::predictTraction
     )
     {
         FatalErrorIn("void unsIncrTotalLagrangianStress::predictTraction(...)")
-            << "Bounary condition on " << DD_.name() 
-                <<  " is " 
-                << DD_.boundaryField()[patchID].type() 
+            << "Bounary condition on " << DD_.name()
+                <<  " is "
+                << DD_.boundaryField()[patchID].type()
                 << "for patch" << mesh().boundary()[patchID].name()
-                << ", instead " 
+                << ", instead "
                 << tractionDisplacementIncrementFvPatchVectorField::typeName
                 << abort(FatalError);
     }
@@ -871,7 +871,7 @@ tmp<vectorField> unsIncrTotalLagrangianStress::predictTraction
 
 tmp<scalarField> unsIncrTotalLagrangianStress::predictPressure
 (
-    const label patchID, 
+    const label patchID,
     const label zoneID
 )
 {
@@ -883,11 +883,11 @@ tmp<scalarField> unsIncrTotalLagrangianStress::predictPressure
     )
     {
         FatalErrorIn("void unsIncrTotalLagrangianStress::predictTraction(...)")
-            << "Bounary condition on " << DD_.name() 
-                <<  " is " 
-                << DD_.boundaryField()[patchID].type() 
+            << "Bounary condition on " << DD_.name()
+                <<  " is "
+                << DD_.boundaryField()[patchID].type()
                 << "for patch" << mesh().boundary()[patchID].name()
-                << ", instead " 
+                << ", instead "
                 << tractionDisplacementIncrementFvPatchVectorField::typeName
                 << abort(FatalError);
     }
@@ -913,7 +913,7 @@ tmp<scalarField> unsIncrTotalLagrangianStress::predictPressure
     );
     scalarField& pF = tpF();
 
-    const label patchStart = 
+    const label patchStart =
         mesh().boundaryMesh()[patchID].start();
 
     forAll(pPF, i)
@@ -983,7 +983,7 @@ bool unsIncrTotalLagrangianStress::evolve()
     {
         if (lduMatrix::debug)
         {
-            Info<< "Time: " << runTime().timeName() 
+            Info<< "Time: " << runTime().timeName()
                 << ", outer iteration: " << iCorr << endl;
         }
 
@@ -1019,7 +1019,7 @@ bool unsIncrTotalLagrangianStress::evolve()
         }
 
         DSigmaf_ = 2*muf_*DEpsilonf_ + I*(lambdaf_*tr(DEpsilonf_));
-        
+
         if (rheology_.plasticityActive())
         {
             DSigmaf_ -= 2*muf_*fvc::interpolate(rheology_.DEpsilonP());
@@ -1045,17 +1045,17 @@ bool unsIncrTotalLagrangianStress::evolve()
 
         if (rheology_.plasticityActive())
         {
-            DDEqn += 
+            DDEqn +=
                 fvc::div
                 (
                     2*muf_
                    *(
-                        mesh().Sf() 
+                        mesh().Sf()
                       & fvc::interpolate(rheology_.DEpsilonP())
                     )
                 );
 
-//             DDEqn += 
+//             DDEqn +=
 //                 fvc::div(2*muf_*(mesh().Sf() & rheology_.DEpsilonPf()));
         }
 
@@ -1089,7 +1089,7 @@ bool unsIncrTotalLagrangianStress::evolve()
             interface()->updateDisplacementIncrement(pointDD_);
             interface()->updateDisplacementIncrementGradient
             (
-                gradDD_, 
+                gradDD_,
                 gradDDf_
             );
         }
@@ -1154,7 +1154,7 @@ bool unsIncrTotalLagrangianStress::evolve()
     }
     while
     (
-        (res > convergenceTolerance) 
+        (res > convergenceTolerance)
      && (++iCorr < nCorr)
     );
 
@@ -1173,9 +1173,9 @@ bool unsIncrTotalLagrangianStress::evolve()
     Info << solverPerf.solverName() << ": Solving for " << DD_.name()
         << ", Initial residula = " << initialResidual
         << ", Final residual = " << solverPerf.initialResidual()
-        << ", No outer iterations = " << iCorr 
-        << "\nMax relative residual = " << maxRes 
-        << ", Relative momentum residual = " << res 
+        << ", No outer iterations = " << iCorr
+        << "\nMax relative residual = " << maxRes
+        << ", Relative momentum residual = " << res
         << ", enforceLinear = " << enforceLinear << endl;
 
     lduMatrix::debug = 1;
@@ -1267,12 +1267,12 @@ bool unsIncrTotalLagrangianStress::writeObject
             curPoints[pointI] += pointDI[pointI];
         }
 
-        // Unused points (procedure developed by Philip Cardiff, UCD) 
+        // Unused points (procedure developed by Philip Cardiff, UCD)
         forAll(globalFaceZones(), zoneI)
         {
             const label curZoneID = globalFaceZones()[zoneI];
 
-            const labelList& curMap = 
+            const labelList& curMap =
                 globalToLocalFaceZonePointMap()[zoneI];
 
             const labelList& curZoneMeshPoints =
@@ -1280,25 +1280,25 @@ bool unsIncrTotalLagrangianStress::writeObject
 
             vectorField curGlobalZonePointDispl
             (
-                curZoneMeshPoints.size(), 
+                curZoneMeshPoints.size(),
                 vector::zero
             );
 
             //-Inter-proc points are shared by multiple procs
             // pointNumProc is the number of procs which a point lies on
             scalarField pointNumProcs(curZoneMeshPoints.size(), 0);
-            
+
             forAll(curGlobalZonePointDispl, globalPointI)
             {
                 label localPoint = curMap[globalPointI];
-	    
+
                 if(curZoneMeshPoints[localPoint] < mesh().nPoints())
                 {
                     label procPoint = curZoneMeshPoints[localPoint];
-                
-                    curGlobalZonePointDispl[globalPointI] = 
+
+                    curGlobalZonePointDispl[globalPointI] =
                         pointDI[procPoint];
-                
+
                     pointNumProcs[globalPointI] = 1;
                 }
             }
@@ -1312,13 +1312,13 @@ bool unsIncrTotalLagrangianStress::writeObject
                 curGlobalZonePointDispl /= pointNumProcs;
             }
 
-            //- The curZonePointsDisplGlobal now contains the correct 
-            //  face zone displacement in a global master processor order, 
+            //- The curZonePointsDisplGlobal now contains the correct
+            //  face zone displacement in a global master processor order,
             //  now convert them back into the local proc order
 
             vectorField curZonePointDispl
             (
-                curZoneMeshPoints.size(), 
+                curZoneMeshPoints.size(),
                 vector::zero
             );
 
@@ -1326,7 +1326,7 @@ bool unsIncrTotalLagrangianStress::writeObject
             {
                 label localPoint = curMap[globalPointI];
 
-                curZonePointDispl[localPoint] = 
+                curZonePointDispl[localPoint] =
                     curGlobalZonePointDispl[globalPointI];
             }
 
@@ -1365,7 +1365,7 @@ bool unsIncrTotalLagrangianStress::writeObject
 
 
     // Calculate second Piola-Kirchhoff equivalent stress
-    
+
     volScalarField sigmaEq
     (
         IOobject
@@ -1382,8 +1382,8 @@ bool unsIncrTotalLagrangianStress::writeObject
 
     Info<< "Max sigmaEq = " << max(sigmaEq).value() << endl;
 
-    Info<< "SigmaEq, max: " << gMax(sigmaEq.internalField()) 
-        << ", avg: " << gAverage(sigmaEq.internalField()) 
+    Info<< "SigmaEq, max: " << gMax(sigmaEq.internalField())
+        << ", avg: " << gAverage(sigmaEq.internalField())
         << ", min: " << gMin(sigmaEq.internalField()) << endl;
 
     // Calculate Cauchy stress (rotate stress field)
@@ -1393,7 +1393,7 @@ bool unsIncrTotalLagrangianStress::writeObject
         volScalarField J = det(F);
         volSymmTensorField sigmaCauchy
         (
-            "sigmaCauchy", 
+            "sigmaCauchy",
             1/J * symm(F.T() & sigma_ & F)
         );
         sigmaCauchy.write();
@@ -1414,8 +1414,8 @@ bool unsIncrTotalLagrangianStress::writeObject
 
         Info<< "Max sigmaCauchyEq = " << max(sigmaCauchyEq).value() << endl;
 
-        Info<< "SigmaCauchyEq, max: " << gMax(sigmaCauchyEq.internalField()) 
-            << ", avg: " << gAverage(sigmaCauchyEq.internalField()) 
+        Info<< "SigmaCauchyEq, max: " << gMax(sigmaCauchyEq.internalField())
+            << ", avg: " << gAverage(sigmaCauchyEq.internalField())
             << ", min: " << gMin(sigmaCauchyEq.internalField()) << endl;
     }
 
@@ -1462,7 +1462,7 @@ bool unsIncrTotalLagrangianStress::writeObject
 
             pointSigma.internalField().replace
             (
-                cmpt, 
+                cmpt,
                 cmptPointSigma.internalField()
             );
         }

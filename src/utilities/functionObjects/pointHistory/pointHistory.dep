@@ -280,6 +280,7 @@ pointHistory.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/PrimitivePatchCheck.C
 pointHistory.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 pointHistory.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 pointHistory.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+pointHistory.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 pointHistory.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 pointHistory.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 pointHistory.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H

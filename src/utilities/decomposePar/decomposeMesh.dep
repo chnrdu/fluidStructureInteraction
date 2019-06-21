@@ -280,6 +280,7 @@ decomposeMesh.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/PrimitivePatchCheck.C
 decomposeMesh.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOps.H
 decomposeMesh.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/ListOpsTemplates.C
 decomposeMesh.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/OFstream.H
+decomposeMesh.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPairList.H
 decomposeMesh.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/labelPair.H
 decomposeMesh.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/Pair.H
 decomposeMesh.dep: $(WM_PROJECT_DIR)/src/foam/lnInclude/boundBox.H
